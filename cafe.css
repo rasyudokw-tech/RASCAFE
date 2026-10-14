@@ -1,0 +1,579 @@
+/* Background utama */
+body {
+    background-color: #F5EFE6;
+    color: #3B2720;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.atas{
+    display:flex;
+    list-style:none;
+    gap: 40px;
+     margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+.atas{
+    font-size: 20px;
+}
+
+.atas a{
+    text-decoration:none;
+    color:#3B2720;
+    font-weight:500;
+    position: relative;
+}
+
+.atas a:hover{
+    color:#3B2720;
+}
+.atas a::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+
+    width: 0;
+    height: 2px;
+
+    background: #3B2720;
+    transition: 0.3s;
+
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+}
+.atas a:hover::after{
+    width: 100%;
+    transform: translateX(-50%) scaleX(1);
+}
+
+/* Logo dan aksen brand */
+.logo {
+    color: #6F4E37;
+     font-size:28px;
+    font-weight:bold;
+     display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 20px;
+}
+
+.logo img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: 50%;
+    transform: translateY(7px);
+}  
+
+/* Tombol utama */
+.kanan a,
+.opening .home-text a,
+#home .btn {
+    display: inline-block;
+    background-color: #6F4E37;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.kanan a:hover,
+.opening .home-text a:hover,
+#home .btn:hover {
+    background-color: #3B2720;
+}
+
+h1{
+    font-size: 37px;
+}
+
+p{
+    font-size: 20px;
+    letter-spacing: -1px;
+}
+
+.opening{
+    margin-top: 110px;
+}
+
+/* Opening: teks di kiri, foto di kanan */
+.opening {
+    padding: 0 5%;
+}
+
+.opening .reveal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.opening .home-text {
+    flex: 1;
+}
+
+.opening .home-image {
+    flex: 1;
+}
+
+.opening .home-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+/* Tombol di opening kasih jarak dari paragraf di atasnya */
+.opening .home-text a,
+#home .btn {
+    margin-top: 10px;
+}
+
+.home{
+margin-top: 100px;
+margin-left: 60px;
+}
+
+#about {
+    padding: 80px 10%;
+}
+
+#about .reveal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.about-text,
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 16px;
+    display: block;
+}
+
+.about-text h2{
+    font-size: 40px;
+}
+
+
+#menu {
+    padding: 90px 10%;
+    background-color: #F5EFE6;
+    color: #3B2720;
+}
+
+.menu-heading {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 45px;
+}
+
+.menu-heading .accent {
+    color: #6F4E37;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.menu-heading h2 {
+    font-size: 36px;
+    margin: 12px 0;
+}
+
+.menu-heading > p:last-child {
+    line-height: 1.7;
+    color: #6F4E37;
+}
+
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.menu-card {
+    background-color: #FFFFFF;
+    padding: 30px 24px;
+    border: 1px solid #E5E0D9;
+    border-radius: 16px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px #3B272020;
+}
+
+.menu-icon {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.menu-card h3 {
+    margin: 0 0 12px;
+    font-size: 21px;
+}
+
+.menu-card p {
+    color: #6F4E37;
+    line-height: 1.6;
+    min-height: 48px;
+}
+
+.menu-card span {
+    display: inline-block;
+    margin-top: 12px;
+    color: #6F4E37;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+#contact {
+    padding: 90px 10%;
+    background: #FFFFFF;
+    color: #3B2720;
+}
+
+.contact-heading {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 50px;
+}
+
+.contact-heading .accent {
+    color: #6F4E37;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.contact-heading h2 {
+    font-size: 36px;
+    margin: 12px 0;
+}
+
+.contact-heading > p:last-child {
+    color: #6F4E37;
+    line-height: 1.7;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.contact-info,
+.contact-form {
+    padding: 30px;
+    border-radius: 16px;
+}
+
+.contact-info {
+    background: #F5EFE6;
+}
+
+.contact-info h3,
+.contact-form h3 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.contact-info p {
+    color: #6F4E37;
+    line-height: 1.7;
+}
+
+.contact-detail {
+    margin-top: 28px;
+}
+
+.contact-detail h4 {
+    margin-bottom: 5px;
+}
+
+.contact-detail p {
+    margin: 4px 0;
+}
+
+.contact-form {
+    border: 1px solid #E5E0D9;
+    background: #FFFFFF;
+}
+
+.contact-form label {
+    display: block;
+    margin: 18px 0 8px;
+    font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #E5E0D9;
+    border-radius: 8px;
+    background: #FDFBF8;
+    color: #3B2720;
+    font: inherit;
+    outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #6F4E37;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: #6F4E37;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #3B2720;
+}
+
+#gallery {
+    padding: 90px 10%;
+    background: #F5EFE6;
+    color: #3B2720;
+}
+
+.gallery-heading {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 45px;
+}
+
+.gallery-heading .accent {
+    color: #6F4E37;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.gallery-heading h2 {
+    font-size: 36px;
+    margin: 12px 0;
+}
+
+.gallery-heading p:last-child {
+    color: #6F4E37;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.gallery-container img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 14px;
+    transition: 0.3s ease;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.03);
+}
+
+@media (max-width: 768px) {
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-heading h2 {
+        font-size: 28px;
+    }
+
+    #contact {
+        padding: 60px 6%;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .menu-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .menu-heading h2 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-container {
+        grid-template-columns: 1fr;
+    }
+
+    #menu {
+        padding: 60px 6%;
+    }
+}
+
+
+/* Di HP: foto pindah ke bawah teks, nav gak lagi posisi absolute */
+@media (max-width: 768px) {
+    nav {
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 10px 15px;
+    }
+
+    .atas {
+        position: static;
+        transform: none;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+        font-size: 16px;
+        width: 100%;
+        order: 3;
+    }
+
+    .opening {
+        margin-top: 40px;
+    }
+
+    .opening .reveal,
+    #about .reveal {
+        flex-direction: column;
+    }
+
+    .opening .home-image img {
+        height: 260px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 17px;
+    }
+}
+
+/* ===== Scroll reveal animation ===== */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Opening & About: teks masuk dari kiri, foto dari kanan */
+.reveal .home-text,
+.reveal .about-text {
+    opacity: 0;
+    transform: translateX(-60px);
+    transition: opacity 0.8s ease 0.15s, transform 0.8s ease 0.15s;
+}
+
+.reveal .home-image,
+.reveal .about-image {
+    opacity: 0;
+    transform: translateX(60px);
+    transition: opacity 0.8s ease 0.3s, transform 0.8s ease 0.3s;
+}
+
+.reveal.active .home-text,
+.reveal.active .about-text,
+.reveal.active .home-image,
+.reveal.active .about-image {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Menu & Gallery: muncul satu per satu (stagger) */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+}
+
+.reveal.active .menu-card,
+.reveal.active .gallery-container img {
+    animation: fadeUp 0.6s ease backwards;
+}
+
+.reveal.active .menu-card:nth-child(2),
+.reveal.active .gallery-container img:nth-child(2) { animation-delay: 0.1s; }
+
+.reveal.active .menu-card:nth-child(3),
+.reveal.active .gallery-container img:nth-child(3) { animation-delay: 0.2s; }
+
+.reveal.active .menu-card:nth-child(4),
+.reveal.active .gallery-container img:nth-child(4) { animation-delay: 0.3s; }
+
+.reveal.active .menu-card:nth-child(5),
+.reveal.active .gallery-container img:nth-child(5) { animation-delay: 0.4s; }
+
+.reveal.active .menu-card:nth-child(6),
+.reveal.active .gallery-container img:nth-child(6) { animation-delay: 0.5s; }
+
+/* Hormati pengaturan "reduce motion" di device */
+@media (prefers-reduced-motion: reduce) {
+    .reveal,
+    .reveal .home-text,
+    .reveal .about-text,
+    .reveal .home-image,
+    .reveal .about-image {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+
+    .reveal.active .menu-card,
+    .reveal.active .gallery-container img {
+        animation: none !important;
+    }
+}
