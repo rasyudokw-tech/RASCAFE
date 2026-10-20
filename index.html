@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RASCAFE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="cafe.css">
+    <noscript><style>.reveal, .reveal .home-text, .reveal .about-text, .reveal .home-image, .reveal .about-image { opacity: 1 !important; transform: none !important; }</style></noscript>
 </head>
 <body>
    <nav>
@@ -12,7 +16,8 @@
     <img src="foto.jfif" alt="logo ras cafe">
     <span>RASCAFE</span>
 </div>
-<ul class="atas">
+<button class="menu-toggle" type="button" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="mobile-navigation"><span></span><span></span><span></span></button>
+<ul class="atas" id="mobile-navigation">
     <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#menu">Menu</a></li>
@@ -28,9 +33,7 @@
          <div class="home-text">
         <h1>GOOD COFFEE.</h1>
         <h1> BETTER MOMENTS.</h1>
-        <p>Nikmati kopi berkualitas dalam suasana hangat</p>
-        <p>dan nyaman, tempat setiap cangkir menjadi bagian</p>
-        <p>dari momen yang berkesan.</p>
+        <p>Nikmati kopi berkualitas dalam suasana hangat dan nyaman, tempat setiap cangkir menjadi bagian dari momen yang berkesan.</p>
         <a href="#menu">Explore Menu</a>
     </div>
         <div class="home-image">
@@ -69,10 +72,7 @@
         <div class="about-text">
         <p class="accent">ABOUT RASCAFE</p>
         <h2>More Than Just Coffee.</h2>
-        <p>At RASCAFE, we believe coffee is more than just a drink — it's a part of life's best moments. We serve </p>
-        <p>quality coffee made with care, bringing together rich flavors, fresh ingredients, and a warm, welcoming</p>
-        <p>atmosphere. Whether you're starting your day, catching up with friends, or taking a moment to relax,</p>
-        <p>RASCAFE is the perfect place to enjoy every sip and create meaningful memories.</p>
+        <p>At RASCAFE, we believe coffee is more than just a drink — it's a part of life's best moments. We serve quality coffee made with care, bringing together rich flavors, fresh ingredients, and a warm, welcoming atmosphere. Whether you're starting your day, catching up with friends, or taking a moment to relax, RASCAFE is the perfect place to enjoy every sip and create meaningful memories.</p>
     </div>
 
     <div class="about-image">
@@ -91,44 +91,67 @@
         <p>Crafted with care, served with love. Find your favorite flavor at RASCAFE.</p>
     </div>
 
+    <!--
+        FOTO MENU: taruh file foto di folder "images" (sebelah index.html) dengan nama persis seperti di bawah.
+        Kalau ekstensinya bukan .jpg (misal .png / .webp), cukup ganti ekstensi di atribut src card terkait.
+        Sebelum fotonya ada, area foto tampil sebagai kotak krem kosong dan layout card tetap rapi.
+          images/espresso.jpg           -> Espresso
+          images/americano.jpg          -> Americano
+          images/cappuccino.jpg         -> Cappuccino
+          images/cafe-latte.jpg         -> Cafe Latte
+          images/caramel-macchiato.jpg  -> Caramel Macchiato
+          images/chocolate-latte.jpg    -> Chocolate Latte
+    -->
     <div class="menu-container">
         <div class="menu-card">
-            <div class="menu-icon">☕</div>
+            <div class="menu-photo">
+                <img src="espresso.jfif" alt="Espresso" loading="lazy">
+            </div>
             <h3>Espresso</h3>
             <p>Rich, bold, and full of flavor.</p>
             <span>Rp18.000</span>
         </div>
 
         <div class="menu-card">
-            <div class="menu-icon">🧊</div>
+            <div class="menu-photo">
+                <img src="americano.jpg" alt="Americano" loading="lazy">
+            </div>
             <h3>Americano</h3>
             <p>Smooth coffee with a clean finish.</p>
             <span>Rp22.000</span>
         </div>
 
         <div class="menu-card">
-            <div class="menu-icon">🥛</div>
+            <div class="menu-photo">
+                <img src="cappuccino.jpg" alt="Cappuccino" loading="lazy">
+            </div>
             <h3>Cappuccino</h3>
             <p>Espresso with creamy milk foam.</p>
             <span>Rp25.000</span>
         </div>
 
         <div class="menu-card">
-            <div class="menu-icon">🤎</div>
+            <div class="menu-photo">
+                <img src="cafe-latte.jpg" alt="Cafe Latte" loading="lazy">
+            </div>
             <h3>Cafe Latte</h3>
             <p>Espresso blended with silky milk.</p>
             <span>Rp27.000</span>
         </div>
 
         <div class="menu-card">
-            <div class="menu-icon">🍮</div>
+            <div class="menu-photo">
+                <img src="caramel-macchiato.jpg" alt="Caramel Macchiato" loading="lazy">
+            </div>
             <h3>Caramel Macchiato</h3>
             <p>Sweet caramel with rich espresso.</p>
             <span>Rp30.000</span>
         </div>
 
         <div class="menu-card">
-            <div class="menu-icon">🍫</div>
+            <div class="menu-photo">
+                <img src="chocolate-latte.jpg" alt="Chocolate Latte" loading="lazy">
+            </div>
             <h3>Chocolate Latte</h3>
             <p>Creamy chocolate with a smooth taste.</p>
             <span>Rp25.000</span>
